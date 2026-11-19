@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#08080b">
+  <meta name="description" content="Binesa Sajan Joseph — BCA student and emerging developer working at the intersection of artificial intelligence, cybersecurity and software engineering.">
+  <title>Binesa Sajan Joseph — AI · Cybersecurity · Software</title>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("binesa-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2308080b'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial' font-size='42' font-weight='700' fill='%238b5cf6'%3EBSJ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Functional loader: only shown while the first cinematic frame is still loading. -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-grid"></div>
+    <div class="loader-inner">
+      <span class="loader-mark">BSJ</span>
+      <span class="loader-label">INITIALIZING PORTFOLIO</span>
+      <span class="loader-track"><i id="loader-bar"></i></span>
+      <span class="loader-status" id="loader-status">Preparing interface</span>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-command" viewBox="0 0 24 24"><path d="M9 7a2.5 2.5 0 1 0-2.5 2.5H9V7Zm0 0v10m0-10h6m-6 10H6.5A2.5 2.5 0 1 0 9 19.5V17Zm6-10V4.5A2.5 2.5 0 1 1 17.5 7H15Zm0 0v10m0 0h2.5A2.5 2.5 0 1 1 15 19.5V17Zm-6 0h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 2.9 8.3 7 10 4.1-1.7 7-5.6 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m9 8-4 4 4 4m6-8 4 4-4 4m-1-9-4 10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m7 9 3 3-3 3m6 0h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 12h18" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m8.5 13.5-1 7L12 18l4.5 2.5-1-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5A2.5 2.5 0 0 1 4 20.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M6.5 9v9m0-12.2v.2M11 18v-9m0 3.2c0-1.8 1.2-3.2 3.1-3.2 1.8 0 2.9 1.2 2.9 3.2V18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2.2-5.6-2.7M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6A4.7 4.7 0 0 0 18.6 6a4.4 4.4 0 0 0-.1-3.2S17 2.5 15 4a12.5 12.5 0 0 0-6 0C7 2.5 5.5 2.8 5.5 2.8A4.4 4.4 0 0 0 5.4 6 4.7 4.7 0 0 0 4.2 9.3c0 4.7 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="#home" aria-label="Binesa Sajan Joseph — home">
+        <span class="brand-mark">BSJ<span class="brand-dot">.</span></span>
+        <span class="brand-text">Binesa Sajan Joseph</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <a href="#home" data-nav-link>Home</a>
+        <a href="#about" data-nav-link>About</a>
+        <a href="#skills" data-nav-link>Skills</a>
+        <a href="#projects" data-nav-link>Projects</a>
+        <a href="#experience" data-nav-link>Experience</a>
+        <a href="#certifications" data-nav-link>Certifications</a>
+        <a href="#contact" data-nav-link>Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn command-btn" id="command-open" type="button" aria-label="Open command palette" title="Command palette (Ctrl+K)">
+          <svg class="icon"><use href="#i-search"></use></svg>
+          <kbd>⌘K</kbd>
+        </button>
+        <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+          <svg class="icon icon-sun"><use href="#i-sun"></use></svg>
+          <svg class="icon icon-moon"><use href="#i-moon"></use></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg class="icon icon-menu"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero section" aria-labelledby="hero-title">
+      <div class="hero-sticky">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-orb hero-orb-a"></div>
+          <div class="hero-orb hero-orb-b"></div>
+          <div class="hero-scan"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow"><span class="status-dot"></span> Emerging developer <span class="sep">/</span> AI · Security · Software</p>
+            <p class="hero-name">Binesa Sajan Joseph <span>/ Portfolio</span></p>
+            <h1 id="hero-title" class="hero-title">
+              <span>Building Intelligent Systems.</span>
+              <span class="accent-line">Exploring Digital Security.</span>
+              <span>Creating Beyond Boundaries.</span>
+            </h1>
+            <p class="hero-intro">
+              I'm <strong>Binesa Sajan Joseph</strong>, a BCA student at CHRIST (Deemed to be University),
+              Yeshwanthpur Campus. I work where artificial intelligence, cybersecurity and software
+              engineering meet — building systems that understand language, surface risk and feel natural to use.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects" data-magnetic>Explore My Work <svg class="icon"><use href="#i-arrow"></use></svg></a>
+              <a class="btn btn-secondary" href="#contact" data-magnetic>Contact Me</a>
+              <button class="btn btn-ghost" id="resume-btn" type="button" hidden>
+                Resume <svg class="icon"><use href="#i-download"></use></svg>
+              </button>
+            </div>
+            <div class="hero-socials" id="hero-socials"></div>
+            <div class="hero-chips" aria-label="Focus areas">
+              <span><svg class="icon"><use href="#i-spark"></use></svg> Artificial Intelligence</span>
+              <span><svg class="icon"><use href="#i-shield"></use></svg> Cybersecurity</span>
+              <span><svg class="icon"><use href="#i-code"></use></svg> Full-Stack Development</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="cinema-aura" aria-hidden="true"></div>
+            <div class="cinema-frame mouse-glow" id="cinema-frame">
+              <canvas id="sequence-canvas" role="img" aria-label="Cinematic 238-frame visual sequence">Cinematic frame sequence.</canvas>
+              <div class="cinema-veil" aria-hidden="true"></div>
+              <div class="corner corner-tl"></div><div class="corner corner-tr"></div>
+              <div class="corner corner-bl"></div><div class="corner corner-br"></div>
+              <div class="cinema-tag" aria-hidden="true">LIVE SEQUENCE <span>/ 238 FRAMES</span></div>
+              <div class="cinema-hud" aria-hidden="true">
+                <span id="sequence-frame-label">001 / 238</span>
+                <span class="cinema-meter"><i id="sequence-meter"></i></span>
+                <span id="sequence-counter">000%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="scroll-indicator" id="hero-scroll" type="button" aria-label="Scroll through the cinematic sequence">
+          <span class="scroll-line"></span><span>Scroll to play sequence</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" data-atmosphere aria-labelledby="about-title">
+      <div class="ambient-layer about-ambient" id="about-ambient" data-ambient aria-hidden="true">
+        <span class="ambient-orb ambient-orb-a"></span>
+        <span class="ambient-orb ambient-orb-b"></span>
+        <span class="ambient-particle p1"></span><span class="ambient-particle p2"></span>
+        <span class="ambient-particle p3"></span><span class="ambient-particle p4"></span>
+        <span class="ambient-particle p5"></span><span class="ambient-particle p6"></span>
+        <svg class="ambient-network" viewBox="0 0 1200 600" preserveAspectRatio="none" focusable="false">
+          <path d="M60 340 280 210 520 300 780 150 1060 260 1160 110" />
+          <path d="M100 120 340 280 600 170 860 320 1110 200" />
+          <circle cx="280" cy="210" r="3" /><circle cx="780" cy="150" r="4" />
+          <circle cx="600" cy="170" r="3" /><circle cx="1060" cy="260" r="3" />
+        </svg>
+        <span class="ambient-line line-a"></span>
+      </div>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">01 / About</span>
+          <h2 id="about-title" class="section-title">A mind for systems,<br><em>an eye for detail.</em></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy" data-reveal>
+            <p class="lead">I'm a BCA student who likes the space between disciplines — where language becomes data, data becomes a decision, and a decision becomes a product.</p>
+            <p>My work centers on artificial intelligence and cybersecurity: analyzing text for deceptive patterns, monitoring logs for suspicious activity, and exploring how local language models can create more natural interactions. Alongside that, I build responsive web applications with clean interfaces and real functionality.</p>
+            <p>My developer journey has been hands-on: learning by building small, complete systems, then refining them through testing, performance work and careful attention to the user experience.</p>
+            <div class="about-facts">
+              <div class="fact"><span class="fact-label">Currently</span><strong>BCA · CHRIST University</strong></div>
+              <div class="fact"><span class="fact-label">Focus</span><strong>AI, Cybersecurity, Software</strong></div>
+              <div class="fact"><span class="fact-label">Approach</span><strong>Build → test → refine</strong></div>
+            </div>
+          </div>
+
+          <div class="identity-panel" data-reveal style="--delay: 120ms">
+            <div class="identity-head"><span class="mono-label">IDENTITY MAP</span><span class="pulse-dot"></span></div>
+            <div class="identity-cards">
+              <article class="identity-card"><svg class="icon"><use href="#i-spark"></use></svg><div><h3>Intelligence</h3><p>NLP, machine learning and LLMs that turn language into insight.</p></div></article>
+              <article class="identity-card"><svg class="icon"><use href="#i-shield"></use></svg><div><h3>Security</h3><p>Threat analysis, intrusion detection and responsible security practice.</p></div></article>
+              <article class="identity-card"><svg class="icon"><use href="#i-code"></use></svg><div><h3>Engineering</h3><p>Responsive full-stack applications with dependable data layers.</p></div></article>
+              <article class="identity-card"><svg class="icon"><use href="#i-terminal"></use></svg><div><h3>Exploration</h3><p>Curious by default — always testing a new idea or a new tool.</p></div></article>
+            </div>
+            <div class="identity-foot"><span>Student · Builder · Problem solver</span><span class="mono-label">2024 — 2027</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills" data-atmosphere aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head split" data-reveal>
+          <div>
+            <span class="section-index">02 / Skills</span>
+            <h2 id="skills-title" class="section-title">MY TECH <em>STACK</em></h2>
+          </div>
+          <p class="section-aside">Technologies, tools and concepts I work with.</p>
+        </div>
+
+        <div class="tech-universe" id="tech-universe" aria-hidden="true">
+          <div class="tech-aura"></div>
+          <div class="tech-cloud" id="tech-cloud"></div>
+          <p class="tech-caption"><span class="pulse-dot"></span> HOVER / TAP A SPHERE TO EXPLORE</p>
+        </div>
+
+        <div class="skill-controls" data-reveal>
+          <div class="tabs" id="skill-tabs" role="tablist" aria-label="Skill categories">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-skill-tab="all">All</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-skill-tab="programming">Programming &amp; Web</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-skill-tab="ai-data">AI &amp; Data</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-skill-tab="security">Cybersecurity</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-skill-tab="tools">Tools &amp; Systems</button>
+          </div>
+          <p class="skill-detail" id="skill-detail" aria-live="polite">Select a skill to see how it fits into my work.</p>
+        </div>
+
+        <div class="skills-groups" id="skills-grid" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects" data-atmosphere aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head split" data-reveal>
+          <div>
+            <span class="section-index">03 / Projects</span>
+            <h2 id="projects-title" class="section-title">Selected work,<br><em>built end to end.</em></h2>
+          </div>
+          <p class="section-aside">Six substantive public GitHub repositories across AI, security, language and the web. Every card links to its real repository; filter the collection or open the full story.</p>
+        </div>
+
+        <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter is-active" type="button" data-filter="All">All <span>06</span></button>
+          <button class="filter" type="button" data-filter="AI / ML">AI / ML <span>03</span></button>
+          <button class="filter" type="button" data-filter="Cybersecurity">Cybersecurity <span>02</span></button>
+          <button class="filter" type="button" data-filter="NLP">NLP <span>01</span></button>
+          <button class="filter" type="button" data-filter="Web Development">Web Development <span>04</span></button>
+        </div>
+
+        <div class="project-stage">
+          <div class="project-orbit" aria-hidden="true">
+            <span class="orbit-ring orbit-ring-1"></span>
+            <span class="orbit-ring orbit-ring-2"></span>
+            <span class="orbit-ring orbit-ring-3"></span>
+            <span class="orbit-ring orbit-ring-4"></span>
+            <span class="orbit-core"><i></i><b id="project-core-count">06</b><small>repos</small><em id="project-focus-label">All repositories</em></span>
+          </div>
+          <div class="project-grid" id="projects-grid"></div>
+        </div>
+        <p class="projects-note" id="projects-note" hidden>No projects in this category yet.</p>
+
+        <aside class="repo-panel" id="repo-panel" aria-labelledby="repo-panel-title">
+          <div class="repo-panel-head">
+            <div>
+              <span class="section-index">LIVE CATALOG</span>
+              <h3 id="repo-panel-title">More on GitHub</h3>
+              <p>Complete public repository list from the GitHub API, with a verified local snapshot as fallback.</p>
+            </div>
+            <div class="repo-panel-actions">
+              <a class="btn btn-secondary" href="https://github.com/Binesa1110" target="_blank" rel="noopener noreferrer" data-repo-link>Profile <svg class="icon"><use href="#i-github"></use></svg></a>
+              <button class="btn btn-ghost" type="button" id="github-refresh"><svg class="icon"><use href="#i-arrow"></use></svg>Refresh</button>
+            </div>
+          </div>
+          <p class="repo-status" id="repo-status" role="status" aria-live="polite">Loading repository snapshot…</p>
+          <ul class="repo-list" id="repo-list"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience" data-atmosphere aria-labelledby="experience-title">
+      <div class="ambient-layer experience-ambient" id="experience-ambient" data-ambient aria-hidden="true">
+        <span class="ambient-orb ambient-orb-a"></span>
+        <span class="ambient-orb ambient-orb-b"></span>
+        <span class="ambient-particle p1"></span><span class="ambient-particle p2"></span>
+        <span class="ambient-particle p3"></span><span class="ambient-particle p4"></span>
+        <span class="ambient-particle p5"></span><span class="ambient-particle p6"></span>
+        <span class="ambient-particle p7"></span><span class="ambient-particle p8"></span>
+        <svg class="ambient-network" viewBox="0 0 1200 600" preserveAspectRatio="none" focusable="false">
+          <path d="M80 420 310 250 520 330 760 140 1030 260 1160 90" />
+          <path d="M40 120 260 260 480 150 700 300 940 180 1130 360" />
+          <path d="M160 560 350 430 610 500 850 360 1090 480" />
+          <circle cx="310" cy="250" r="3" /><circle cx="760" cy="140" r="4" />
+          <circle cx="480" cy="150" r="3" /><circle cx="940" cy="180" r="3" />
+          <circle cx="610" cy="500" r="4" /><circle cx="1030" cy="260" r="3" />
+        </svg>
+        <span class="ambient-line line-a"></span><span class="ambient-line line-b"></span>
+      </div>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">04 / Experience</span>
+          <h2 id="experience-title" class="section-title">Where theory met<br><em>real deadlines.</em></h2>
+        </div>
+
+        <div class="experience-grid">
+          <div class="timeline" data-timeline data-reveal>
+            <div class="timeline-rail"><span class="timeline-progress"></span><span class="timeline-node"></span></div>
+            <article class="timeline-card" data-tilt>
+              <div class="timeline-top">
+                <div>
+                  <span class="mono-label">APRIL 2025 — MAY 2025</span>
+                  <h3>Full Stack Developer Intern</h3>
+                  <p class="timeline-org">Unified Mentor</p>
+                </div>
+                <span class="timeline-icon"><svg class="icon"><use href="#i-briefcase"></use></svg></span>
+              </div>
+              <p class="timeline-desc">Built and refined responsive web applications with a focus on authentication, data integration and measurable performance improvements.</p>
+              <div class="timeline-tech" aria-label="Technologies used during the internship">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Developed responsive applications using HTML, CSS, JavaScript and Firebase.</li>
+                <li>Delivered four interactive projects during the internship.</li>
+                <li>Implemented authentication and database integration.</li>
+                <li>Conducted testing and performance optimization across projects.</li>
+              </ul>
+              <div class="timeline-accomplishment"><svg class="icon"><use href="#i-spark"></use></svg><span>Verified outcome: four interactive projects delivered.</span></div>
+            </article>
+          </div>
+
+          <div class="experience-metrics" data-reveal style="--delay: 120ms">
+            <div class="metric-card" data-tilt>
+              <span class="metric-value">70<span>%</span></span>
+              <p>Responsiveness improvement</p>
+              <small>Resume-reported across projects</small>
+            </div>
+            <div class="metric-card" data-tilt>
+              <span class="metric-value">20<span>%</span></span>
+              <p>Reduction in load time</p>
+              <small>Resume-reported across projects</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section education" data-atmosphere aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-index">05 / Education</span>
+          <h2 id="education-title" class="section-title">The foundation.</h2>
+        </div>
+        <div class="edu-stage" data-reveal style="--delay: 80ms">
+          <article class="edu-card education-flip" data-flip-card data-institution="christ" aria-label="Education details for Bachelor of Computer Applications">
+            <div class="edu-card-inner">
+              <div class="edu-face edu-face-front edu-face-photo">
+                <img class="edu-photo" src="byc-campus.webp" alt="CHRIST University Yeshwanthpur campus" decoding="async">
+                <span class="edu-photo-veil" aria-hidden="true"></span>
+                <div class="edu-mark"><svg class="icon"><use href="#i-book"></use></svg></div>
+                <div class="edu-main">
+                  <span class="mono-label">2024 — 2027</span>
+                  <h3>CHRIST (Deemed to be University)</h3>
+                  <p>Yeshwanthpur Campus, Bengaluru</p>
+                </div>
+                <div class="edu-front-foot">
+                  <span class="mono-label">01 / ACADEMIC FOUNDATION</span>
+                  <button class="flip-btn" type="button" data-flip-toggle aria-controls="edu-back-1" aria-expanded="false">View details <svg class="icon"><use href="#i-chevron"></use></svg></button>
+                </div>
+              </div>
+              <div class="edu-face edu-face-back" id="edu-back-1" aria-hidden="true">
+                <span class="mono-label">QUALIFICATION &amp; FOCUS</span>
+                <h4>Bachelor of Computer Applications</h4>
+                <p class="edu-back-copy">2024 — 2027 · CHRIST (Deemed to be University)<br>Yeshwanthpur Campus, Bengaluru</p>
+                <span class="mono-label">LEARNING AREAS</span>
+                <div class="edu-tags">
+                  <span>Computer Applications</span><span>AI &amp; Security interests</span><span>2027 cohort</span>
+                </div>
+                <button class="flip-btn flip-btn-back" type="button" data-flip-toggle aria-expanded="false">Show front <svg class="icon"><use href="#i-chevron"></use></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="edu-card education-flip" data-flip-card data-institution="school" aria-label="Education details for St. Joseph Convent School">
+            <div class="edu-card-inner">
+              <div class="edu-face edu-face-front edu-face-photo">
+                <img class="edu-photo" src="school.jpg" alt="St. Joseph Convent School building" decoding="async">
+                <span class="edu-photo-veil" aria-hidden="true"></span>
+                <div class="edu-mark"><svg class="icon"><use href="#i-book"></use></svg></div>
+                <div class="edu-main">
+                  <span class="mono-label">SCHOOL EDUCATION</span>
+                  <h3>St. Joseph Convent School</h3>
+                  <p>Jabalpur, Madhya Pradesh</p>
+                </div>
+                <div class="edu-front-foot">
+                  <span class="mono-label">02 / SCHOOL FOUNDATION</span>
+                  <button class="flip-btn" type="button" data-flip-toggle aria-expanded="false">View details <svg class="icon"><use href="#i-chevron"></use></svg></button>
+                </div>
+              </div>
+              <div class="edu-face edu-face-back" aria-hidden="true">
+                <span class="mono-label">SCHOOL EDUCATION</span>
+                <h4>St. Joseph Convent School</h4>
+                <p class="edu-back-copy">Jabalpur, Madhya Pradesh</p>
+                <span class="mono-label">SUBJECTS</span>
+                <div class="edu-tags">
+                  <span>Mathematics</span><span>Science</span>
+                </div>
+                <button class="flip-btn flip-btn-back" type="button" data-flip-toggle aria-expanded="false">Show front <svg class="icon"><use href="#i-chevron"></use></svg></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section certifications" data-atmosphere aria-labelledby="cert-title">
+      <div class="container">
+        <div class="section-head split" data-reveal>
+          <div>
+            <span class="section-index">06 / Certifications</span>
+            <h2 id="cert-title" class="section-title">Proof of<br><em>continuous learning.</em></h2>
+          </div>
+          <p class="section-aside">Short courses and bootcamps that pushed my work toward AI and security.</p>
+        </div>
+
+        <div class="cert-stack-track" id="cert-stack-track">
+          <div class="cert-sticky">
+            <div class="cert-stack" id="cert-stack" role="list" aria-label="Certifications">
+              <article class="cert-card" data-cert-card data-topic="ai" role="listitem" tabindex="0" aria-labelledby="cert-title-1" id="cert-1">
+                <div class="cert-content">
+                  <span class="cert-index">01 / 04</span>
+                  <div class="cert-meta">
+                    <span class="cert-icon"><svg class="icon"><use href="#i-spark"></use></svg></span>
+                    <span class="cert-date">JULY 2026</span>
+                  </div>
+                  <h3 id="cert-title-1">Build with AI Bootcamp</h3>
+                  <p class="cert-issuer">Google for Developers &amp; Hack2Skill</p>
+                  <span class="cert-topic">AI · Neural networks</span>
+                  <span class="cert-verification">No public verification link supplied</span>
+                </div>
+                <figure class="cert-visual">
+                  <img src="assets/certifications/cert-ai.jpg" alt="Topic visual: artificial intelligence neural network illustration, not an official certificate" decoding="async">
+                  <figcaption>Topic visual · mikemacmarketing / CC BY 2.0</figcaption>
+                </figure>
+              </article>
+              <article class="cert-card" data-cert-card data-topic="cybersecurity" role="listitem" tabindex="-1" aria-labelledby="cert-title-2" id="cert-2">
+                <div class="cert-content">
+                  <span class="cert-index">02 / 04</span>
+                  <div class="cert-meta">
+                    <span class="cert-icon"><svg class="icon"><use href="#i-shield"></use></svg></span>
+                    <span class="cert-date">MAY 2026</span>
+                  </div>
+                  <h3 id="cert-title-2">Foundations of Cybersecurity</h3>
+                  <p class="cert-issuer">Google</p>
+                  <span class="cert-topic">Cybersecurity · Data protection</span>
+                  <span class="cert-verification">No public verification link supplied</span>
+                </div>
+                <figure class="cert-visual">
+                  <img src="assets/certifications/cert-cybersecurity.jpg" alt="Topic visual: data security and breach imagery, not an official certificate" decoding="async">
+                  <figcaption>Topic visual · Blogtrepreneur / CC BY 2.0</figcaption>
+                </figure>
+              </article>
+              <article class="cert-card" data-cert-card data-topic="privacy" role="listitem" tabindex="-1" aria-labelledby="cert-title-3" id="cert-3">
+                <div class="cert-content">
+                  <span class="cert-index">03 / 04</span>
+                  <div class="cert-meta">
+                    <span class="cert-icon"><svg class="icon"><use href="#i-terminal"></use></svg></span>
+                    <span class="cert-date">2025</span>
+                  </div>
+                  <h3 id="cert-title-3">Master Privacy and Security in Online Social Media</h3>
+                  <p class="cert-issuer">NPTEL</p>
+                  <span class="cert-topic">Privacy · Online social media</span>
+                  <span class="cert-verification">No public verification link supplied</span>
+                </div>
+                <figure class="cert-visual">
+                  <img src="assets/certifications/cert-privacy.jpg" alt="Topic visual: mobile device privacy, not an official certificate" decoding="async">
+                  <figcaption>Topic visual · Stefan Nürnberger / CC BY-SA 4.0</figcaption>
+                </figure>
+              </article>
+              <article class="cert-card" data-cert-card data-topic="generative" role="listitem" tabindex="-1" aria-labelledby="cert-title-4" id="cert-4">
+                <div class="cert-content">
+                  <span class="cert-index">04 / 04</span>
+                  <div class="cert-meta">
+                    <span class="cert-icon"><svg class="icon"><use href="#i-award"></use></svg></span>
+                    <span class="cert-date">2025</span>
+                  </div>
+                  <h3 id="cert-title-4">Master Generative AI &amp; Generative AI Tools</h3>
+                  <p class="cert-issuer">Infosys Springboard</p>
+                  <span class="cert-topic">Generative AI · Creative tools</span>
+                  <span class="cert-verification">No public verification link supplied</span>
+                </div>
+                <figure class="cert-visual">
+                  <img src="assets/certifications/cert-generative.jpg" alt="Topic visual: generative AI artwork, not an official certificate" decoding="async">
+                  <figcaption>Topic visual · Ai Fashion Model / CC0</figcaption>
+                </figure>
+              </article>
+            </div>
+            <div class="cert-controls" data-reveal style="--delay: 120ms">
+              <button class="cert-nav" type="button" data-cert-prev aria-label="Previous certification"><svg class="icon"><use href="#i-chevron"></use></svg></button>
+              <span class="cert-status" id="cert-status" role="status" aria-live="polite">Certificate 1 of 4</span>
+              <button class="cert-nav" type="button" data-cert-next aria-label="Next certification"><svg class="icon"><use href="#i-chevron"></use></svg></button>
+            </div>
+            <div class="cert-progress" aria-hidden="true"><span id="cert-progress-bar"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" data-atmosphere aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy" data-reveal>
+          <span class="section-index">07 / Contact</span>
+          <h2 id="contact-title" class="section-title contact-title">Let's build something<br><em>meaningful.</em></h2>
+          <p class="contact-intro">If you're working on something thoughtful in AI, security or the web, I'd love to hear about it. Let's explore what we can build together.</p>
+          <p class="contact-availability"><span class="availability-dot" aria-hidden="true"></span>Open to internships, projects &amp; collaborations</p>
+          <div class="contact-links" id="contact-links"></div>
+          <p class="email-note" id="email-availability-note">No public email is listed — LinkedIn and GitHub are the verified ways to reach me.</p>
+
+          <figure class="portrait-character" data-tilt aria-label="Personal portrait detail from the cinematic sequence">
+            <span class="portrait-orbit" aria-hidden="true"></span>
+            <span class="portrait-frame">
+              <img src="frames/ezgif-frame-120.jpg" alt="Stylized portrait detail from Binesa's own cinematic frame sequence" decoding="async">
+              <span class="portrait-scan" aria-hidden="true"></span>
+            </span>
+            <figcaption><span class="pulse-dot" aria-hidden="true"></span> PERSONAL SIGNAL · ARCHIVE FRAME</figcaption>
+          </figure>
+        </div>
+
+        <div class="contact-panel contact-3d" data-reveal style="--delay: 120ms" data-tilt>
+          <div class="contact-panel-head"><span class="mono-label">START A CONVERSATION</span><span class="pulse-dot" aria-hidden="true"></span></div>
+          <p class="contact-panel-sub">Share a few details and I'll get back to you.</p>
+          <form id="contact-form" novalidate aria-busy="false">
+            <div class="field">
+              <label for="contact-name">Full Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your full name" maxlength="100" required aria-describedby="contact-name-error">
+              <span class="field-error" id="contact-name-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required aria-describedby="contact-email-error">
+              <span class="field-error" id="contact-email-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" name="subject" type="text" placeholder="What's this about?" maxlength="200" required aria-describedby="contact-subject-error">
+              <span class="field-error" id="contact-subject-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Tell me what you're working on..." maxlength="5000" required aria-describedby="contact-message-error contact-message-count"></textarea>
+              <span class="field-foot"><span class="field-error" id="contact-message-error" aria-live="polite"></span><span class="field-counter" id="contact-message-count">0 / 5000</span></span>
+            </div>
+            <div class="hp-field" aria-hidden="true">
+              <label for="contact-website">Website</label>
+              <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+            <div class="contact-actions">
+              <button class="btn btn-primary btn-full" id="contact-submit" type="submit">
+                <span class="btn-label">Send message</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <svg class="icon btn-arrow" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+              <button class="btn btn-secondary btn-full" id="contact-retry" type="button" hidden>Try again <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+            </div>
+          </form>
+          <div class="contact-success" id="contact-success" role="status" aria-live="polite" hidden>
+            <span class="success-icon" aria-hidden="true"><svg class="icon"><use href="#i-check"></use></svg></span>
+            <span class="mono-label">MESSAGE RECEIVED</span>
+            <p id="contact-success-message" tabindex="-1">Your message has been received! I'll get back to you as soon as possible.</p>
+            <button class="btn btn-secondary" type="button" id="contact-another">Send another message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><span class="brand-mark">BSJ<span class="brand-dot">.</span></span><p>Built with intention at the intersection of AI, security and software.</p></div>
+      <div class="footer-socials" id="footer-links" aria-label="Social links"></div>
+      <div class="footer-right"><span>© <span id="year">2026</span> Binesa Sajan Joseph</span><a href="#home">Back to top <svg class="icon"><use href="#i-arrow-up"></use></svg></a></div>
+    </div>
+  </footer>
+
+  <!-- COMMAND PALETTE -->
+  <div class="palette" id="palette" hidden>
+    <div class="overlay-backdrop" data-close-palette></div>
+    <div class="palette-panel" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="palette-search"><svg class="icon"><use href="#i-search"></use></svg><input id="palette-input" type="text" placeholder="Search sections and actions..." autocomplete="off" spellcheck="false" aria-label="Search commands"><kbd>ESC</kbd></div>
+      <div class="palette-list" id="palette-list" role="listbox" aria-label="Commands"></div>
+      <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> select</span><span><kbd>esc</kbd> close</span></div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="modal" id="project-modal" hidden>
+    <div class="overlay-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+      <button class="modal-close icon-btn" type="button" data-close-modal aria-label="Close project details"><svg class="icon"><use href="#i-close"></use></svg></button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="cursor-layer" aria-hidden="true"><span class="cursor-ring" id="cursor-ring"></span><span class="cursor-dot" id="cursor-dot"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="sequence.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

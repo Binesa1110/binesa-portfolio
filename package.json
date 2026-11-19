@@ -1,0 +1,14 @@
+{
+  "name": "binesa-portfolio",
+  "version": "1.0.0",
+  "description": "Interactive two-theme portfolio with a cinematic canvas frame sequence",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/smoke.js"
+  }
+}
